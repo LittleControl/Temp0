@@ -20,8 +20,15 @@
     ]
   },
   "dependencies": {
+    "@ant-design/compatible": "^1.0.8",
     "@ant-design/pro-layout": "^6.5.0",
-    "@umijs/preset-react": "1.x",
+    "@umijs/preset-react": "^1.7.13",
+    "antd": "^4.11.2",
+    "enquire-js": "^0.2.1",
+    "rc-banner-anim": "^2.4.5",
+    "rc-queue-anim": "^1.8.5",
+    "rc-scroll-anim": "^2.7.6",
+    "rc-tween-one": "^2.7.3",
     "umi": "^3.3.7"
   },
   "devDependencies": {

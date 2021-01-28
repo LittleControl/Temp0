@@ -1,19 +1,28 @@
 export default [
   {
     path: '/',
+    redirect: '/index',
+    // component: '@/layouts/BasicLayout'
+  },
+  {
+    path: '/index',
+    component: '@/pages/Home/index',
+  },
+  {
+    path: '/products',
     component: '@/layouts/BasicLayout',
     routes: [
       {
-        path: '/',
-        redirect: '/index',
+        path: '/products',
+        redirect: '/products/60',
       },
       {
-        path: '/index',
-        component: './Index/Index',
+        path: '/products/60',
+        component: './Products/V60',
       },
       {
-        path: '/nothing',
-        component: './Nothing/Nothing',
+        path: '/products/70',
+        component: './Products/V70',
       },
     ],
   },

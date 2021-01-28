@@ -1,40 +1,25 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
-import {
-  UserOutlined,
-  LaptopOutlined,
-  NotificationOutlined,
-} from '@ant-design/icons';
 import './basiclayout.css';
 import { history, Link } from 'umi';
-import route from 'color-convert/route';
 
-const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 const headerMenu = [
-  { route: '/index', name: '首页', key: 'index' },
-  { route: '/nothing', name: '没用', key: 'nothing' },
-  { route: '/index1', name: '首页', key: 'index1' },
-  { route: '/nothing2', name: '没用', key: 'nothing' },
-  { route: '/index3', name: '首页', key: 'index3' },
-  { route: '/nothing4', name: '没用', key: 'nothing4' },
-  { route: '/index5', name: '首页', key: 'index5' },
-  { route: '/nothing6', name: '没用', key: 'nothing6' },
-  { route: '/index7', name: '首页', key: 'index7' },
-  { route: '/nothing8', name: '没用', key: 'nothing8' },
+  { route: '/index', name: '首页', key: '/index' },
+  { route: '/products', name: '套餐产品', key: '/products' },
+  { route: '/process', name: '制作流程', key: '/process' },
+  { route: '/advertising', name: '广告宣传', key: '/advertising' },
+  { route: '/template', name: '网站模板', key: '/template' },
+  { route: '/custom', name: '版本定做', key: '/custom' },
+  { route: '/aboutus', name: '关于我们', key: '/aboutus' },
 ];
 
 const siderMenu = [
-  { route: '/index9', name: '首页', key: 'index9' },
-  { route: '/nothing10', name: '没用', key: 'nothing10' },
-  { route: '/index11', name: '首页', key: 'index11' },
-  { route: '/nothing12', name: '没用', key: 'nothing12' },
-  { route: '/index13', name: '首页', key: 'index13' },
-  { route: '/nothing14', name: '没用', key: 'nothing14' },
-  { route: '/index15', name: '首页', key: 'index15' },
-  { route: '/nothing16', name: '没用', key: 'nothing16' },
-  { route: '/index17', name: '首页', key: 'index17' },
-  { route: '/nothing18', name: '没用', key: 'nothing18' },
+  { route: '/products', name: '全部版本', key: '/products' },
+  { route: '/products/60', name: '60版本', key: '/products/60' },
+  { route: '/products/70', name: '70版本', key: '/products/70' },
+  { route: '/products/80', name: '80版本', key: '/products/80' },
+  { route: '/products/90', name: '90版本', key: '/products/90' },
 ];
 
 const BasicLayout = (props) => {
@@ -66,7 +51,7 @@ const BasicLayout = (props) => {
           <Sider className="site-layout-background" width={200}>
             <Menu
               mode="inline"
-              defaultSelectedKeys={['index9']}
+              defaultSelectedKeys={[history.location.pathname]}
               style={{ height: '100%' }}
             >
               {siderMenu.map((value) => {
