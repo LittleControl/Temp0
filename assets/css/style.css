@@ -2,7 +2,8 @@ html,
 body {
   /* background-color: rgba(0, 0, 0, 0.3); */
   /* background-color: black; */
-  background: url("../img/logo/bg0.jpg")
+  /* background: url("../img/logo/bg0.jpg") */
+  background: url("https://i.loli.net/2021/02/01/8z5nwhQ6o9CvaHr.jpg");
 }
 
 .white-bg {
